@@ -8,6 +8,7 @@ class Sketch : NSObject {
     
     // Position of circle
     var x : Int
+    var dx : Int
     
     // This function runs once
     override init() {
@@ -16,19 +17,30 @@ class Sketch : NSObject {
         canvas = Canvas(width: 500, height: 500)
         
         // Set starting position
-        x = 250
+        x = 0
+        dx = 1
         
     }
     
     // Runs in a loop, forever, to create the animated effect
     func draw() {
+        canvas.fillColor = Color.white
+        canvas.drawRectangle(centreX: 0, centreY: 0, width: 1000, height: 1000)
+        canvas.fillColor = Color.init(hue: x, saturation: 100, brightness: 100, alpha: 100)
         
         // Change position
-        x += 1
+        x += dx
+        
+        //Check position and reverse course if  we go off the edge of the screen
+        if x > 475 {
+            dx = -3
+        }
+        if x < 25 {
+            dx = 3
+        }
         
         // Draw an ellipse in the middle of the canvas
-        canvas.drawEllipse(centreX: x, centreY: 250, width: 50, height: 50)
-        
-    }
-    
+        canvas.drawEllipse(centreX: x, centreY: x, width: 50, height: 50)
+
+}
 }
