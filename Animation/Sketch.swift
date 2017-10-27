@@ -27,6 +27,8 @@ class Sketch : NSObject {
         x += 1
         
         //Adding color!!!
+        canvas.fillColor = Color.init(hue: x, saturation: 100, brightness: 100, alpha: 100)
+        
         
         // Draw an ellipse in the middle of the canvas
         canvas.drawEllipse(centreX: x, centreY: x, width: 50, height: 50)
