@@ -15,7 +15,28 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 400, height: 300)
+let canvas = Canvas(width: 800, height: 600)
+
+//Drawing The Pumpki base
+
+canvas.drawEllipse(centreX: 350, centreY: 300, width: 150, height: 170)
+canvas.drawEllipse(centreX: 400, centreY: 300, width: 150, height: 170)
+canvas.drawRectangle(centreX: 380, centreY: 390, width: 30, height: 50)
+canvas.fillColor = Color.white
+canvas.drawEllipse(centreX: 350, centreY: 320, width: 20, height: 30)
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: 350, centreY: 300, width: 30, height: 50)
+canvas.fillColor = Color.white
+canvas.drawEllipse(centreX: 400, centreY: 320, width: 20, height: 30)
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: 400, centreY: 300, width: 30, height: 50)
+canvas.fillColor = Color.white
+canvas.drawEllipse(centreX: 380, centreY: 270, width: 140, height: 40)
+canvas.fillColor = Color.black
+canvas.drawEllipse(centreX: 380, centreY: 265, width: 140, height: 35)
+
+
+
 
 /*:
  ## Add your code below

@@ -63,8 +63,7 @@ class ViewController: NSViewController {
     @objc func timedDraw() {
         
         // Call the draw() method on the Sketch object
-        sketch.draw()
-        
+
         // Increment the frame count for the current canvas of the sketch
         sketch.canvas.frameCount += 1
         
