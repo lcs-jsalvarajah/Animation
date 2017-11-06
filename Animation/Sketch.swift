@@ -1,3 +1,10 @@
+// Extend the Degrees data type so that we can obtain it's value in radians
+extension Degrees {
+    func toRadians() -> Double {
+        return Double(self) * Double.pi / 180.0
+    }
+}
+
 import Foundation
 
 class Sketch : NSObject {
@@ -7,7 +14,7 @@ class Sketch : NSObject {
     let canvas : Canvas
     
     // Position of circle
-    var x : Int
+    var x : Degrees
     var dx : Int
     var y : Int
     var dy : Int
@@ -20,9 +27,9 @@ class Sketch : NSObject {
         canvas = Canvas(width: 500, height: 500)
         
         // Set starting position
-        x = 250
+        x = 0
         dx = 1
-        y = 0.1(Double(x)-250)(Double(x)-250) + 100
+        y = 0
         dy = 1
         
     }
@@ -30,11 +37,15 @@ class Sketch : NSObject {
     // Runs in a loop, forever, to create the animated effect
     func draw() {
         
+        // Transformation parameters
+        let a = 100.0
+        
         // Change position
         x += 1
+        y = Int(a * sin(x.toRadians()))
         
         // Draw an ellipse in the middle of the canvas
-        canvas.drawEllipse(centreX: x, centreY: 250, width: 50, height: 50)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 100 , width: 1, height: 1)
         
     }
     
