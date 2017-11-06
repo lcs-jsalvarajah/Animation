@@ -36,7 +36,7 @@ class Sketch : NSObject {
     
     // Runs in a loop, forever, to create the animated effect
     func draw() {
-        
+        canvas.drawShapesWithBorders = false
         // Transformation parameters
         let a = 200.0
         
@@ -45,12 +45,12 @@ class Sketch : NSObject {
         y = Int(a * sin(x.toRadians()))
         
         // Draw an ellipse in the middle of the canvas
-        canvas.drawEllipse(centreX: Int(x) , centreY: y + 250 , width: 1, height: 1)
-        canvas.drawEllipse(centreX: Int(x) , centreY: y + 350 , width: 1, height: 1)
-        canvas.drawEllipse(centreX: Int(x) , centreY: y + 250 , width: 1, height: 1)
-        canvas.drawEllipse(centreX: Int(x) , centreY: y + 450 , width: 1, height: 1)
-        canvas.drawEllipse(centreX: Int(x) , centreY: y + 150 , width: 1, height: 1)
-        canvas.drawEllipse(centreX: Int(x) , centreY: y + 50 , width: 1, height: 1)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 250 , width: 10, height: 10)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 350 , width: 10, height: 10)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 550 , width: 10, height: 10)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 450 , width: 10, height: 10)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 150 , width: 10, height: 10)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 50 , width: 10, height: 10)
 
 
 
