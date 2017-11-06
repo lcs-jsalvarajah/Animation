@@ -38,14 +38,24 @@ class Sketch : NSObject {
     func draw() {
         
         // Transformation parameters
-        let a = 100.0
+        let a = 200.0
         
         // Change position
         x += 1
         y = Int(a * sin(x.toRadians()))
         
         // Draw an ellipse in the middle of the canvas
-        canvas.drawEllipse(centreX: Int(x) , centreY: y + 100 , width: 1, height: 1)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 250 , width: 1, height: 1)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 350 , width: 1, height: 1)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 250 , width: 1, height: 1)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 450 , width: 1, height: 1)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 150 , width: 1, height: 1)
+        canvas.drawEllipse(centreX: Int(x) , centreY: y + 50 , width: 1, height: 1)
+
+
+
+      
+
         
     }
     
