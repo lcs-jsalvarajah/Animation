@@ -11,6 +11,8 @@ class Sketch : NSObject {
     var dx : Int
     var y : Int
     var dy : Int
+   
+   
     
     // This function runs once
     override init() {
@@ -22,10 +24,10 @@ class Sketch : NSObject {
        
         // Set starting position
         x = 0
-        dx = 1
+       dx = 1
         y = 0
-
-        dy = 1
+       dy = 1
+      
         
     }
     
@@ -39,6 +41,7 @@ class Sketch : NSObject {
         x += dx
         y = Int(-0.01*pow(Double(x)-150, 2) + 450)
         print(y)
+    
         
         //Check position and reverse course if  we go off the edge of the screen
        
