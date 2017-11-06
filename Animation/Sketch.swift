@@ -8,6 +8,10 @@ class Sketch : NSObject {
     
     // Position of circle
     var x : Int
+    var dx : Int
+    var y : Int
+    var dy : Int
+    
     
     // This function runs once
     override init() {
@@ -17,6 +21,9 @@ class Sketch : NSObject {
         
         // Set starting position
         x = 250
+        dx = 1
+        y = 0.1(Double(x)-250)(Double(x)-250) + 100
+        dy = 1
         
     }
     
